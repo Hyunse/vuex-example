@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    {{ $store.state.count }}
+    <counter></counter>
+    <counter></counter>
+    <reset></reset>
+    <async-counter></async-counter>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
+import Counter from './components/Counter'
+import Reset from './components/Reset'
+import AsyncCounter from './components/AsyncCounter'
 export default {
   name: 'app',
   components: {
-    Hello
+    Counter,
+    Reset,
+    AsyncCounter
   }
 }
 </script>
